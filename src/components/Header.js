@@ -3,16 +3,16 @@ import AppBar from "@mui/material/AppBar";
 
 export default function Header() {
   return (
-    <AppBar style={{ height: "2em" }} position="static" color="inherit">
+    <AppBar style={{ height: "5em" }} position="static" color="inherit">
       <a
         style={{ margin: "1px" }}
-        href="https://crealytics.com/"
+        href="https://doctari.de/"
         target="_blank"
         rel="noreferrer"
       >
         <img
-          style={{ width: "11em", height: "2em" }}
-          src="https://crealytics.com/wp-content/uploads/2020/03/logo_crealytics-1.png"
+          style={{ width: "14em", height: "5em" }}
+          src="https://media.stepstone.com/upload_de/logo/A/logodoctari-GmbH-178044DE-2011171259.gif"
           alt="logo"
         />
       </a>

@@ -114,7 +114,7 @@ const UserList = ({ data }) => {
                   className={classes.item}
                   id={projectItem.id}
                   primary={projectItem.name}
-                  secondary={`ID: ${projectItem.id}, Address: ${projectItem.address},
+                  secondary={`Address: ${projectItem.address},
                     Postal Code: ${projectItem.zip}`}
                 />
                 <ListItemAvatar>
