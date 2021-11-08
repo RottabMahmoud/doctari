@@ -34,18 +34,18 @@ const UserList = ({ data }) => {
   const [searchTerm, setSearchTerm] = useState("");
 
   /**
-   * Our Product List state, and use Effect to set it to be equal to the data coming as our prop, once the ProductList
-   * is Rendered
+   * Our List state
    */
   const [listOfItems, setListOfItems] = useState([]);
   useEffect(() => {
     setListOfItems(data);
   }, [data]);
   /**
-   * The List Item OnClick Event to Trigger the Popover and pass the Additional zip of the selected Item.
+   * The List Item OnClick Event to Trigger the Popover and pass the state of the selected Item.
    */
   const handleClick = (event, value) => {
     setAnchorEl(event.currentTarget);
+    console.log("###", value)
     setZip(value);
   };
 
@@ -59,7 +59,7 @@ const UserList = ({ data }) => {
   const open = Boolean(anchorEl);
   const id = open ? "simple-popover" : undefined;
 
-  // Our Additional zip array of Strings
+  // Our zip 
   const [zip, setZip] = useState();
 
   /**
@@ -141,7 +141,7 @@ const UserList = ({ data }) => {
         open={open}
       >
         {/*List of zip Component */}
-        <GeoLocation itemData={zip} />
+        <GeoLocation state={zip} />
       </Popover>
       <Divider />
       {/* Pagination Component */}
