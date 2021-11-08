@@ -148,8 +148,7 @@ function Home() {
   };
 
   /**
-   * Use effect to fetch the data once the component is rendered,
-   * and passing and empty array as the second argument to make it run only once.
+   * Use effect to fetch the data once the component is rendered
    */
   useEffect(() => {
     setDataWithNewGeoLocation(data);
