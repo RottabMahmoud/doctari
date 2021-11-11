@@ -59,7 +59,7 @@ npm install @material-ui/core
 ## Project Hierarchy
 
 ```bash
-  crealytics
+  doctari
     ├─ public
     │  ├─ favicon.ico
     │  ├─ index.html
