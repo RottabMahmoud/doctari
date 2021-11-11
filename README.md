@@ -96,4 +96,4 @@ npm install @material-ui/core
 
 ## Badge
 
-<a href="https://www.linkedin.com/in/mahmoud-rottab-234255219/"> <img src="https://img.shields.io/badge/Mahmoud%20Rottab-LinkedIn-red" alt="Crealytee" /> </a>
+<a href="https://www.linkedin.com/in/mahmoud-rottab-234255219/"> <img src="https://img.shields.io/badge/Mahmoud%20Rottab-LinkedIn-red" alt="Mahmoud Rottab" /> </a>
