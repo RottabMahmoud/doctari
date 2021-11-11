@@ -5,9 +5,9 @@ import axios from "axios";
 
 function Home() {
   /**
-   * Our list of Data **STATE, using React Hooks.
+   * Our list of Static Data.
    */
-  const [data, setData] = React.useState([
+  const [data] = React.useState([
     {
       id: 0,
       name: "Alex Heinrich",
@@ -124,34 +124,41 @@ function Home() {
     },
   ]);
 
-  const setDataWithNewGeoLocation = (x) => {
-    // let temp = [];
-    const headers = {
-      address: "94149 Kößlarn",
-      key: "AIzaSyBIHWg56dGw3SWOMH-8k9_NPa_wyFVoPuo",
-    };
-    axios({
-      url: `https://maps.googleapis.com/maps/api/geocode/json?address=${headers.address}&key=${headers.key}`,
-      method: "get",
-      // headers: {
-      // address: "62000 Neustadt",
-      // "Content-Type": "application/json",
-      // },
-    })
-      .then((response) => {
-        console.log(response.data.results);
-        // [0].formatted_address
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-
   /**
    * Use effect to fetch the data once the component is rendered
    */
   useEffect(() => {
-    setDataWithNewGeoLocation(data);
+    for (let i = 0; i < data.length; i++) {
+      const headers = {
+        address: data[i].zip,
+        key: "AIzaSyBIHWg56dGw3SWOMH-8k9_NPa_wyFVoPuo",
+      };
+      axios({
+        url: `https://maps.googleapis.com/maps/api/geocode/json?address=${headers.address}&key=${headers.key}`,
+        method: "get",
+      })
+        .then((response) => {
+          for (
+            let j = 0;
+            j < response.data.results[0].address_components.length;
+            j++
+          ) {
+            let federalState;
+            if (
+              response.data.results[0].address_components[j].types[0] ===
+              "administrative_area_level_1"
+            ) {
+              federalState =
+                response.data.results[0].address_components[j].long_name;
+              data[i].federal_state = federalState;
+              console.log("###FEDERAL STATE###", data[i].federal_state);
+            }
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
   }, [data]);
 
   return (

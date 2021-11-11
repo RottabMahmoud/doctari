@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# Doctari Case Study Description
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## What the Application does
 
-## Available Scripts
+- A tool which presents the given test static data in an user interface.
+- The tool is able to display the federal states of Germany (Bundesland) for each User in the records, by Clicking on it.
+- A Dynamic Search Filter by Name with Autocomplete Functionality, is at the top of the page,
 
-In the project directory, you can run:
+## Technologies
 
-### `yarn start`
+- Material UI
+- React
+- React Testing Library/ jest
+- JavaScript
+- React hooks
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Some of the challenges I've faced and how I've tackled them
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Using the GoogleMaps Geocoding API to get the federal states, by each Users's address.
+  " https://maps.googleapis.com/maps/api/geocode/json?address=<ADRESS>&key=<GOOGLE_API_KEY>"
 
-### `yarn test`
+## Project Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+git clone https://github.com/Rottabx/doctari.git
+cd doctari
+yarn
+```
 
-### `yarn build`
+## To Start the App
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+yarn start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## For Running the Tests
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+yarn test
+```
 
-### `yarn eject`
+## For Building
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+yarn build
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Usage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Used Material UI as a Component Library.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+npm install @mui/material
+npm install @mui/material @emotion/react @emotion/styled
+npm install @mui/icons-material
+npm install @material-ui/core
+```
 
-## Learn More
+## Project Hierarchy
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+  crealytics
+    ├─ public
+    │  ├─ favicon.ico
+    │  ├─ index.html
+    ├─ src
+    │  ├─ index.js
+    │  ├─ components
+    │  │  ├─ Header.js
+    │  │  ├─ GeoLocation.js
+    │  │  ├─ UserList.js
+    │  │  ├─ Search.js
+    │  ├─ tests
+    │  │  ├─ Header.test.js
+    │  │  ├─ Home.test.js
+    │  │  ├─ GeoLocation.test.js
+    │  │  └─ UserList.test.js
+    │  │  └─ Search.test.js
+    │  ├─ views
+    │  │  └─ Home.js
+    │  │─ App.css
+    │  │─ App.js
+    │  │─ reportWebVitals
+    │  │─ setupTests.js
+    ├─ .gitignore
+    ├─ node_modules
+    ├─ package.json
+    ├─ package-lock.json
+    ├─ README.md
+    └─ yarn.lock
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
 
-### Code Splitting
+[MIT](https://choosealicense.com/licenses/mit/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Badge
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<a href="https://www.linkedin.com/in/mahmoud-rottab-234255219/"> <img src="https://img.shields.io/badge/Mahmoud%20Rottab-LinkedIn-red" alt="Crealytee" /> </a>

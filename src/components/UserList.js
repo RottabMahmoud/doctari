@@ -5,7 +5,7 @@ import Avatar from "@material-ui/core/Avatar";
 import ListItemText from "@material-ui/core/ListItemText";
 import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import Popover from "@mui/material/Popover";
-import GeoLocation from "./GeoLocation.js";
+import FederalState from "./FederalState.js";
 import Pagination from "@mui/material/Pagination";
 
 // Styling our list of items
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 // Styling the Pop over postion
 const PopoverStyle = {
-  top: "50px",
+  top: "40px",
 };
 
 const UserList = ({ data }) => {
@@ -45,8 +45,7 @@ const UserList = ({ data }) => {
    */
   const handleClick = (event, value) => {
     setAnchorEl(event.currentTarget);
-    console.log("###", value)
-    setZip(value);
+    setFederalState(value);
   };
 
   /**
@@ -59,8 +58,8 @@ const UserList = ({ data }) => {
   const open = Boolean(anchorEl);
   const id = open ? "simple-popover" : undefined;
 
-  // Our zip 
-  const [zip, setZip] = useState();
+  // Our zip
+  const [federalState, setFederalState] = useState();
 
   /**
    * PAGINATION Handling.
@@ -107,7 +106,7 @@ const UserList = ({ data }) => {
                 key={projectItem.id}
                 button
                 onClick={(event) => {
-                  handleClick(event, projectItem.zip);
+                  handleClick(event, projectItem.federal_state);
                 }}
               >
                 <ListItemText
@@ -140,8 +139,8 @@ const UserList = ({ data }) => {
         onClose={handleClose}
         open={open}
       >
-        {/*List of zip Component */}
-        <GeoLocation state={zip} />
+        {/*Federal State Component */}
+        <FederalState state={federalState} />
       </Popover>
       <Divider />
       {/* Pagination Component */}

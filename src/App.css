@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+}
+
+.MuiAutocomplete-option {
+  border-bottom: 0.2em dotted red;
+}
+.MuiList-root {
+  display: flex;
+  flex-direction: column;
+}
+
+.fedState {
+  width: auto;
+  height: auto;
+}

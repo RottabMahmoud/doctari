@@ -44,7 +44,7 @@ export default function Search({ data, setSearch }) {
       onChange={(event, value) => setSearch(value)} // for handling the auto complete selection upon selection
       id="virtualize"
       classes={classes}
-      style={{ width: "26.4em" }}
+      style={{ width: "18em" }}
       listbox={{ backgroundColor: "black" }}
       disablePortal={true}
       renderInput={(params) => (
