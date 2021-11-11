@@ -67,13 +67,13 @@ npm install @material-ui/core
     │  ├─ index.js
     │  ├─ components
     │  │  ├─ Header.js
-    │  │  ├─ GeoLocation.js
+    │  │  ├─ FederalState.js
     │  │  ├─ UserList.js
     │  │  ├─ Search.js
     │  ├─ tests
     │  │  ├─ Header.test.js
     │  │  ├─ Home.test.js
-    │  │  ├─ GeoLocation.test.js
+    │  │  ├─ FederalState.test.js
     │  │  └─ UserList.test.js
     │  │  └─ Search.test.js
     │  ├─ views
